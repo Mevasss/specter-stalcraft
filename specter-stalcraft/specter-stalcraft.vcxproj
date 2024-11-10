@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{58497985-e568-45b0-8c23-d756df5941b0}</ProjectGuid>
+    <RootNamespace>specterstalcraft</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:\SDK\GLFW\includes;D:\SDK\minhook\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Mevas\source\repos\specter-stalcraft\specter-stalcraft\Vmprotect\Lib;C:\Users\Mevas\source\repos\specter-stalcraft\specter-stalcraft\Keyauth\Lib;D:\SDK\minhook\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;SPECTERSTALCRAFT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;SPECTERSTALCRAFT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;SPECTERSTALCRAFT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;SPECTERSTALCRAFT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <FloatingPointModel>Strict</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>VMProtectSDK64.lib;library_x64.lib;libcurl.lib;opengl32.lib;libMinHook.x64.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Oxorany\Oxorany.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\glDrawElements\glDrawElements.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\glGetFloatv\glGetFloatv.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\glUniformMatrix4fv\glUniformMatrix4fv.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\glScalef\glScalef.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\Hooks.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui_draw.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui_tables.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\Esp\Esp.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\Render\Menu\Menu.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\Render\Render.cpp" />
+    <ClCompile Include="Stalcraft\Hooks\wglSwapBuffers\wglSwapBuffers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Keyauth\Keyauth.h" />
+    <ClInclude Include="Oxorany\Oxorany.h" />
+    <ClInclude Include="Oxorany\Oxorany_include.h" />
+    <ClInclude Include="Stalcraft\Hooks\glDrawElements\glDrawElements.h" />
+    <ClInclude Include="Stalcraft\Hooks\glGetFloatv\glGetFloatv.h" />
+    <ClInclude Include="Stalcraft\Hooks\glUniformMatrix4fv\glUniformMatrix4fv.h" />
+    <ClInclude Include="Stalcraft\Hooks\glScalef\glScalef.h" />
+    <ClInclude Include="Stalcraft\Hooks\Hooks.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imconfig.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui_impl_opengl2.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imgui_internal.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imstb_rectpack.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imstb_textedit.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Libs\Imgui\imstb_truetype.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Esp\Esp.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Render\Menu\Menu.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\Render\Render.h" />
+    <ClInclude Include="Stalcraft\Hooks\wglSwapBuffers\wglSwapBuffers.h" />
+    <ClInclude Include="Stalcraft\Stalcraft.h" />
+    <ClInclude Include="Stalcraft\Structs\Structs.h" />
+    <ClInclude Include="Vmprotect\Vmprotect.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
